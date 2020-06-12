@@ -20,7 +20,7 @@ example_workflow = DAG('kube-operator',
 
 with example_workflow:
     t1 = KubernetesPodOperator(namespace='airflow',
-                               image="registry.kubeops.io:8190/docker.io/busybox:1.31.0"
+                               image="registry.kubeops.io:8190/docker.io/busybox:1.31.0",
                                cmds=["bash", "-cx"],
                                arguments=["echo", "hello world"],
                                labels={'runner': 'airflow'},
@@ -31,7 +31,7 @@ with example_workflow:
                                )
 
     t2 = KubernetesPodOperator(namespace='airflow',
-                               image="registry.kubeops.io:8190/docker.io/busybox:1.31.0"
+                               image="registry.kubeops.io:8190/docker.io/busybox:1.31.0",
                                cmds=["bash", "-cx"],
                                arguments=["echo", "hello world"],
                                labels={'runner': 'airflow'},
@@ -42,7 +42,7 @@ with example_workflow:
                                )
 
     t3 = KubernetesPodOperator(namespace='airflow',
-                               image="registry.kubeops.io:8190/docker.io/busybox:1.31.0"
+                               image="registry.kubeops.io:8190/docker.io/busybox:1.31.0",
                                cmds=["bash", "-cx"],
                                arguments=["echo", "hello world"],
                                labels={'runner': 'airflow'},
@@ -53,7 +53,7 @@ with example_workflow:
                                )
 
     t4 = KubernetesPodOperator(namespace='airflow',
-                               image="registry.kubeops.io:8190/docker.io/busybox:1.31.0"
+                               image="registry.kubeops.io:8190/docker.io/busybox:1.31.0",
                                cmds=["bash", "-cx"],
                                arguments=["echo", "hello world"],
                                labels={'runner': 'airflow'},
